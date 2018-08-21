@@ -1,5 +1,5 @@
 var data = {
-  'GDL': {
+  'AQP': {
     '2016-2': {
       'students': [
         {

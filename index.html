@@ -1,109 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Cantarell|Open+Sans|Oxygen|Roboto|Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Data Dashboard</title>
-  </head>
-  <!-- BODY -->
-  <body>
-    <!-- LOGIN -->
-<!--    <div id='login'> -->
-    <!-- HEADER ....USUARIO Y LOGO -->
-    <header>
-      <div id='firstsection'>
-        <img id='imageuser' src="assets/images/Mujer3.jpg" alt="">
-        <img id='logolab' src="assets/images/LaboratoriaLogo.png" alt="">
-      </div>
-      <!-- HEADER ....MENU -->
-      <section id='sections'>
-        <a class='menu' href='#statistics'>ESTADÍSTICAS</a>
-        <a class='menu'href='#location'>SEDES</a>
-        <a class='menu' href='#coaches'>COACHES</a>
-      </section>
-    </header>
-    <!-- MAIN -->
-    <main>
-      <!-- Estadisticas Generales-->
-      <section>
-        <div id='container' class='statistics'>
-          <A  id='statistics' name='statistics'></A>
-          <img class='logos' src="assets/images/Estadisticas.png" alt="">
 
-          <div id='chartActive' class='chartStatistics'></div>
-          <div id='chartNoActive'class='chartStatistics'></div>
-          <div id='averageSat' class='chartStatistics'></div>
-          <!--<div  class='chartStatistics'>Cantidad y % estudantes exitosas<</div>-->
-        </div>
-      </section>
-      <!-- Sedes pagina principal-->
-      <section>
-        <div  id='container1' class='location'>
-          <A  id='location' name='location'></A>
-          <img class='logos' src='assets/images/Sedes.png' alt="">
-          <a class='menu' href='#GDL'><img class='sedelab' src="assets/images/GDL.jpg" alt=""></a>
-          <a class='menu' href='#CDMX'><img class='sedelab' src="assets/images/CDMX.jpg" alt=""></a>
-          <a class='menu' href='#SCL'><img class='sedelab' src="assets/images/SCL.jpg" alt=""></a>
-          <a class='menu' href='#LIM'><img class='sedelab' src="assets/images/LIM.jpg" alt=""></a>
-        </div>
-        <!-- Sedes individuales-->
-        <div class='containersedes'>
-          <A name='GDL'><img class='logos' src="assets/images/GDL.png" alt=""></A>
-          <div id='chartActiveGDL' class='chartStatistics'></div>
-          <div id='averageSatGDL' class='chartStatistics'></div>
-          <div id='chartNoActiveGDL' class='chartStatistics'></div>
-          <div class='listStatistics' class='chartStatistics'><ul id='nameGDL' class='names'><h4>Estudiantes inactivas</h4><hr></ul></div>
-          <!--<div  class='chartStatistics'>Cantidad y % estudantes exitosas<</div>-->
-        </div>
-        <div class='containersedes'>
-          <A name='CDMX'><img class='logos' src="assets/images/CDMX.png" alt=""></A>
-          <div id='chartActiveMEX' class='chartStatistics'></div>
-          <div id='averageSatMEX' class='chartStatistics'></div>
-          <div id='chartNoActiveMEX' class='chartStatistics'></div>
-          <div class='listStatistics' class='chartStatistics'><ul id='nameMEX' class='names'><h4>Estudiantes inactivas</h4><hr></ul></div>
-          <!--<div class='chartStatistics'>Cantidad y % estudantes exitosas</div>-->
-        </div>
-        <div class='containersedes'>
-          <A name='SCL'><img class='logos' src="assets/images/SCL.png" alt=""></A>
-          <div id='chartActiveSCL' class='chartStatistics'></div>
-          <div id='chartNoActiveSCL' class='chartStatistics'></div>
-          <div id='averageSatSCL' class='chartStatistics'></div>
-          <div class='listStatistics' class='chartStatistics'><ul id='nameSCL' class='names'><h4>Estudiantes inactivas</h4><hr></ul></div>
-          <!--<div  class='chartStatistics'>Cantidad y % estudantes exitosas<</div>-->
-        </div>
-        <div class='containersedes'>
-          <A name='LIM'><img class='logos' src="assets/images/LIM.png" alt=""></A>
-          <div id='chartActiveLIM' class='chartStatistics'></div>
-          <div id='chartNoActiveLIM' class='chartStatistics'></div>
-          <div id='averageSatLIM'class='chartStatistics'></div>
-          <div class='listStatistics' class='chartStatistics'><ul id='nameLIM' class='names'><h4>Estudiantes inactivas</h4><hr></ul></div>
-          <!--<div  class='chartStatistics'>Cantidad y % estudantes exitosas<</div>-->
-        </div>
-      </section>
-      <!-- Coaches-->
-      <section>
-        <div  id='container2' class='coaches'>
-          <A  id='coaches' name='coaches'></A>
-          <img class='logos' src='assets/images/Coaches.png' alt="">
-          <div id="chartAveTeach" class='chartCoaches'></div>
-          <div id="chartAveTeach1" class='chartCoaches'></div>
-          <div id="chartAveJedi" class='chartCoaches'></div>
-          <div id="chartAveJedi1" class='chartCoaches'></div>
-        </div>
-      </section>
-   </main>
-  </div>
-  <!-- FOTTER -->
-  <footer>
-    <div class="copy">
-      <small>Copyright &copy; G2Monik&AlexD 2018</small>
-<!--  </div> -->
-  </footer>
-   <!-- Base de datos -->
-   <script src="./js/data.js"></script>
-   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-   <script type="text/javascript" src="js/app.js"></script>
- </body>
+<head>
+    <meta charset="utf-8">
+    <title>Data Dashboard</title>
+</head>
+
+<body>
+    <!--SELECTOR PARA SEDES-->
+    <select id="sedes"> 
+      <option value="">Sede</option>
+    </select>
+    <!--SELECTOR PARA GENERACION-->
+    <select id="generation">
+        <option value="">Generación </option>
+    </select>
+    <!--SELECTOR PARA ESTUDIANTES-->
+    <h2>DATOS GENERALES</h2>
+    <section id="students">
+            <!--<h4 id="semestre">Generación: 2016-1</h4>-->
+            <!--<p id="total">Total de estudiantes: </p>-->    
+            <!--<p id="active">Estudiantes activas: </p>-->
+            <!--<p id="desercionStd">Desercion: %</p>-->  
+            
+    </section>
+
+</body>
+<script src="./js/data.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+
 </html>
